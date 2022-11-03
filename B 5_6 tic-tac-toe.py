@@ -69,28 +69,24 @@ def computer_running1(table1):
     for i in range(3):
         for j in range(3):
             content_str.insert(j, table1[i][j])
-        print(content_str, "Строка ", i)
         if (content_str.count('0') == 2) and (content_str.count('')) and (running_bool == False):
             table1[i][content_str.index('')] = '0'
             running_bool = True
         content_str = []
         for j in range(3):
             content_str.insert(j, table1[j][i])
-        print(content_str, "Столбец ", i)
         if (content_str.count('0') == 2) and (content_str.count('')) and (running_bool == False):
             table1[content_str.index('')][i] = '0'
             running_bool = True
         content_str = []
     for j in range(3):
         content_str.insert(j, table1[j][j])
-    print(content_str, "Диагональ1")
     if (content_str.count('0') == 2) and (content_str.count('')) and (running_bool == False):
         table1[content_str.index('')][content_str.index('')] = '0'
         running_bool = True
     content_str = []
     for j in range(3):
         content_str.insert(j, table1[j][2 - j])
-    print(content_str, "Диагональ2")
     if (content_str.count('0') == 2) and (content_str.count('')) and (running_bool == False):
         table1[content_str.index('')][2 - content_str.index('')] = '0'
         running_bool = True
@@ -100,28 +96,24 @@ def computer_running1(table1):
     for i in range(3):
         for j in range(3):
             content_str.insert(j, table1[i][j])
-        print(content_str, "Строка ",i)
         if (content_str.count('x') == 2) and (content_str.count('')) and (running_bool == False):
             table1[i][content_str.index('')] = '0'
             running_bool = True
         content_str = []
         for j in range(3):
             content_str.insert(j, table1[j][i])
-        print(content_str, "Столбец ", i)
         if (content_str.count('x') == 2) and (content_str.count('')) and (running_bool == False):
             table1[content_str.index('')][i] = '0'
             running_bool = True
         content_str = []
     for j in range(3):
         content_str.insert(j, table1[j][j])
-    print(content_str, "Диагональ1")
     if (content_str.count('x') == 2) and (content_str.count('')) and (running_bool == False):
         table1[content_str.index('')][content_str.index('')] = '0'
         running_bool = True
     content_str = []
     for j in range(3):
         content_str.insert(j, table1[j][2 - j])
-    print(content_str, "Диагональ2")
     if (content_str.count('x') == 2) and (content_str.count('')) and (running_bool == False):
         table1[content_str.index('')][2 - content_str.index('')] = '0'
         running_bool = True
